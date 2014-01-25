@@ -1,6 +1,10 @@
 <div class="jumbotron center">
 	<h1>BeatBox Cashier</h1>
-	<p>
-		<%= link_to "Sign In", "#", class: "btn btn-lg btn-primary" %>
-	</p>
+	<% if user_signed_in? %>
+			# do something
+	<% else %>
+		<p>
+			<%= link_to "Sign In", new_user_session_path, class: "btn btn-lg btn-primary" %>
+		</p>
+	<% end %>
 </div>
