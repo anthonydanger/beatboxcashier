@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fp qty:</strong>
+  <%= @transaction.fp_qty %>
+</p>
+
+<p>
+  <strong>Dp qty:</strong>
+  <%= @transaction.dp_qty %>
+</p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @transaction.event_id %>
+</p>
+
+<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
+<%= link_to 'Back', transactions_path %>

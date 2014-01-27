@@ -1,4 +1,8 @@
 Beatboxcashier::Application.routes.draw do
+  resources :transactions
+
+  resources :events
+
   devise_for :users
   root "pages#home"
   
