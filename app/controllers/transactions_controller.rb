@@ -27,7 +27,8 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new(transaction_params)
     @transaction.event_id = Event.last[:id]
       if @transaction.save
-        redirect_to @transaction, notice: 'Transaction was successfully created.'
+        redirect_to new_transaction_path, notice: "Please collect $#{ (@transaction.fp_qty * Event.last[:fullprice]) + (@transaction.dp_qty * Event.last[:discount]) }!"
+        #redirect_to @transaction, notice: 'Transaction was successfully created.'
       else
        render action: 'new'
       end
