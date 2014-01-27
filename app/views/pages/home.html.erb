@@ -1,7 +1,8 @@
 <div class="jumbotron center">
 	<h1>BeatBox Cashier</h1>
 	<% if user_signed_in? %>
-			# do something
+		<%= link_to "Create New Event", new_event_path, class: "btn btn-lg btn-primary" %>
+		<%= link_to "Open Last Event", new_transaction_path, class: "btn btn-lg btn-primary" %>
 	<% else %>
 		<p>
 			<%= link_to "Sign In", new_user_session_path, class: "btn btn-lg btn-primary" %>
