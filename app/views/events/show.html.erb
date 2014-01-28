@@ -11,18 +11,33 @@
 </p>
 
 <p>
-  <strong>Fullprice:</strong>
+  <strong>Fullprice:$</strong>
   <%= @event.fullprice %>
 </p>
 
 <p>
-  <strong>Discount:</strong>
+  <strong>Discount:$</strong>
   <%= @event.discount %>
 </p>
 
 <p>
   <strong>Cashier:</strong>
   <%= @event.cashier %>
+</p>
+
+<p>
+  <strong>Full Price Tickets Sold:</strong>
+  <%= fp_qty_total %>
+</p>
+
+<p>
+  <strong>Discount Tickets Sold:</strong>
+  <%= dp_qty_total %>
+</p>
+
+<p>
+  <strong>C.I.D:</strong>
+  <%= fp_qty_total * Event.last[:fullprice]) + (dp_qty_total * Event.last[:discount] %>
 </p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |

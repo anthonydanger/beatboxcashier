@@ -1,4 +1,4 @@
-<h1>Listing events</h1>
+<h1>Events</h1>
 
 <table>
   <thead>
@@ -15,7 +15,7 @@
   </thead>
 
   <tbody>
-    <% @events.each do |event| %>
+    <% @events.order("id desc").each do |event| %>
       <tr>
         <td><%= event.name %></td>
         <td><%= event.date %></td>
@@ -32,4 +32,5 @@
 
 <br>
 
-<%= link_to 'New Event', new_event_path %>
+<%= link_to 'Create a New Event', new_event_path %> |
+<%= link_to "ADD TRANSACTIONS TO #{Event.last.name}", new_transaction_path %> 

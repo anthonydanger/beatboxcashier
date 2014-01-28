@@ -1,6 +1,7 @@
-<h1>New transaction</h1>
+<h1>New Transaction for <%= Event.last.name %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', transactions_path %>
+<%= link_to 'Back to Event', Event.last %> |
+
 
